@@ -1,0 +1,41 @@
+.card {
+  height: 100px;
+  left: 727.5px;
+  top: 102px;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  box-shadow: 0px 3px 16px rgba(47, 83, 109, 0.12);
+  border-radius: 9px;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.walletImg {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.content > * + * {
+  margin-top: 0.3rem;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.9px;
+  line-height: 24px;
+  color: #212529;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.7px;
+  line-height: 20px;
+
+  color: #6c757d;
+}
+
+/* Rectangle 1 */

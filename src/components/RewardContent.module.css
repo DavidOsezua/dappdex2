@@ -1,0 +1,68 @@
+.container {
+  max-width: 1425px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  background: rgba(232, 196, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 300px;
+}
+
+.textContainer {
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.textContainer > * + * {
+  margin-top: 1rem;
+}
+
+.text {
+  /* Register your wallet today and receive 500 USDT within the next 24 hours. Invite friends and family, and earn 300 USDT as a referral reward. */
+
+  max-width: 1182px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 42px;
+
+  color: #ffffff;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 765px) {
+  .text {
+    /* Register your wallet today and receive 500 USDT within the next 24 hours. Invite friends and family, and earn 300 USDT as a referral reward. */
+
+    max-width: 1182px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 42px;
+
+    color: #ffffff;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}

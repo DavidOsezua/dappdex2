@@ -1,0 +1,19 @@
+.loader {
+  width: 250px;
+  height: 20px;
+
+  background: radial-gradient(circle 7px, #581b80 95%, #0000) right /
+      calc(200% + 20px) 100%,
+    linear-gradient(#c771ff 0 0) center/100% 2px;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 4px, #581b80 93%, #000)
+    right/calc(200% + 20px) 100%;
+  animation: ct6 1s infinite linear;
+}
+
+@keyframes ct6 {
+  100% {
+    background-position: left;
+    -webkit-mask-position: left;
+  }
+}

@@ -1,0 +1,50 @@
+.section {
+  background-color: #08023c;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+}
+
+.container {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.littleText {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.2px;
+  line-height: 17px;
+
+  color: rgba(255, 255, 255, 0.73);
+}
+.text {
+  max-width: 587px;
+  /* height: 48px; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 48px;
+
+  color: #ffffff;
+}
+
+.line {
+  /* Line 4 */
+  width: 431px;
+  margin: 0 auto;
+
+  border: 1px solid rgba(232, 241, 255, 0.33);
+}
+
+@media screen and (min-width: 912px) {
+  .line {
+    width: 1331px;
+  }
+}

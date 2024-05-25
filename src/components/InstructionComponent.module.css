@@ -1,0 +1,42 @@
+.instructionSection {
+  background-color: #08023C;
+  padding-bottom: 1rem;
+}
+
+.container {
+  max-width: 1425px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.instructionTitle {
+  /*  */
+  width: 261px;
+  height: 36px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #e250e5 0%, #da43a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media screen and (min-width: 912px) {
+  .cardContainer {
+    flex-direction: row;
+  }
+}

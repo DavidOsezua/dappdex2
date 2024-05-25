@@ -1,0 +1,87 @@
+.heroSection {
+  background-color: #08023c;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.heroContainer {
+  max-width: 1425px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.heroImage {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+}
+
+.text {
+  /* Using our Cutting Edge Encryption Technology we employ state-of-the-art encryption protocols to fortify the walls of your digital wallet. */
+
+  max-width: 711px;
+  height: 60px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.5px;
+  line-height: 30px;
+
+  color: rgba(239, 239, 239, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .heroImage {
+    display: none;
+  }
+
+  .check {
+    display: none;
+    transition: all 2s ease-in-out;
+  }
+}
+
+.showMenu {
+  display: block;
+}
+
+@media screen and (min-width: 912px) {
+  .heroSection {
+    padding-top: 3rem;
+    height: 70vh;
+  }
+  .heroContainer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .heroImage {
+    top: 50px;
+  }
+
+  .title {
+    max-width: 611px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 58px;
+
+    color: #ffffff;
+  }
+
+  .check {
+    display: none;
+  }
+}

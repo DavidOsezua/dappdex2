@@ -1,0 +1,44 @@
+.featuresSection {
+  background-color: #08023c;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+}
+
+.container {
+  max-width: 1425px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.featuresTitle {
+  /*  */
+  width: 261px;
+  height: 36px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #e250e5 0%, #da43a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 912px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
