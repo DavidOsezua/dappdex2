@@ -8,6 +8,9 @@ import { Logo, ham } from "../assets";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 import NavMenu from "./NavMenu";
+import { useWeb3Modal } from '@web3modal/wagmi/react'
+
+
 
 const Navbar = ({toggleHandler}) => {
 

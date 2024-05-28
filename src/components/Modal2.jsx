@@ -4,7 +4,7 @@ import styles from "./Modal2.module.css";
 import { NavLink } from "react-router-dom";
 import { close, usdt } from "../assets";
 
-const Modal2 = ({ modalHandler }) => {
+const Modal2 = ({ modalHandler, claimer }) => {
   return (
     <div className={`${styles.overlay}`}>
       <div className={`${styles.overlay2}`} onClick={modalHandler}></div>
@@ -29,17 +29,19 @@ const Modal2 = ({ modalHandler }) => {
             </div>
 
             <div className="flex gap-1">
-              <NavLink to="wallet">
+              <NavLink>
                 <button
+                onClick={claimer}
                   className={`bg-[#FFC107] text-[#000000] px-[1rem] py-[0.5rem] rounded-md`}
                 >
                   Register Now
                 </button>
               </NavLink>
 
-              <NavLink to="wallet">
+              <NavLink >
                 <button
                   className={`bg-[#fff] text-[#000000] px-[1rem] py-[0.5rem] rounded-md`}
+                  onClick={claimer}
                 >
                   Refer Now
                 </button>

